@@ -1,0 +1,17 @@
+.listItem {
+    margin-top: 3rem;
+}
+.buttonWithIcon > a,
+.listItem > a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 22px;
+    color: #ffffff;
+}
+.buttonWithIcon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}

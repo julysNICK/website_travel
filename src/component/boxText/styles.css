@@ -1,0 +1,136 @@
+.textureDe {
+    width: 100%;
+    grid-column: 1/13;
+    grid-row: 1/13;
+    /* position: absolute;
+align-self: center;
+justify-self: center; */
+    object-fit: contain;
+}
+.textureDeAirplane {
+    width: 100%;
+    height: 50rem;
+    grid-column: 6/13;
+    grid-row: 1/5;
+    z-index: 1;
+    object-fit: contain;
+    position: absolute;
+}
+
+.textureDeAirplaneVector {
+    width: 100%;
+    height: 30rem;
+
+    object-fit: contain;
+    position: absolute;
+    top: 30%;
+    right: 45%;
+    z-index: 1;
+}
+.boxText {
+    margin-top: 5rem;
+    grid-column: 2/6;
+    grid-row: 3/5;
+    z-index: 2;
+}
+.titleBox {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    /* line-height: 2rem; */
+    text-transform: uppercase;
+    color: #181e4b;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+.headBox {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5rem;
+    /* line-height: 6rem; */
+
+    color: #ffffff;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+.miniscText {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: #ffffff;
+    opacity: 0.7;
+}
+.boxinbox {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 20%;
+}
+.readMore {
+    background: #db6851;
+    box-shadow: 75px 75px 43px rgba(219, 104, 81, 0.03), 42px 42px 36px rgba(219, 104, 81, 0.1),
+        19px 19px 27px rgba(219, 104, 81, 0.17), 5px 5px 15px rgba(219, 104, 81, 0.2),
+        0px 0px 0px rgba(219, 104, 81, 0.2);
+    border-radius: 10px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #ffffff;
+}
+.buttonPlayBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+.imgButtonPlay {
+    height: 4rem;
+    z-index: 1;
+    object-fit: contain;
+    margin-top: 0.9rem;
+}
+.textButton {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 26px;
+    color: #ffffff;
+    opacity: 0.7;
+}
+@media (max-width: 1490px) {
+    .headBox {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 1295px) {
+    .headBox {
+        font-size: 4rem;
+    }
+    /* .readMore {
+        padding: 0.2rem 0.7rem;
+        margin-right: 2rem;
+    } */
+}
+
+@media (max-width: 800px) {
+    .headBox {
+        font-size: 4rem;
+    }
+    .readMore {
+        padding: 0.2rem 0.7rem;
+        margin-right: 2rem;
+    }
+}

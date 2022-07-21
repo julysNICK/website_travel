@@ -1,0 +1,204 @@
+.boxDestination {
+    margin-top: 5rem;
+    grid-column: 1/12;
+    grid-row: 9/10;
+    z-index: 2;
+    position: relative;
+}
+
+.title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #ffffff;
+
+    opacity: 0.7;
+}
+
+.Captilize {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 2rem;
+    /* identical to box height */
+
+    text-align: center;
+    text-transform: capitalize;
+
+    /* 3rd */
+
+    color: #14183e;
+}
+
+.rowCardsDest {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    margin-left: 0%;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.cardDest {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.describeTextCard {
+    color: #5e6282;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1rem;
+
+    /* or 162% */
+
+    text-align: center;
+
+    opacity: 0.7;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.cardImgDest {
+    object-fit: cover;
+    width: 20rem;
+    height: 30rem;
+}
+.cardDescribe {
+    width: 85%;
+    background: #ffffff;
+    border-radius: 0px 0px 24px 24px;
+    position: absolute;
+    bottom: 0;
+}
+.titleCard {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    text-align: center;
+
+    /* text heading color */
+
+    color: #1e1d4c;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.describeTextCard {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1rem;
+
+    text-align: center;
+
+    color: #ffffff;
+
+    opacity: 0.7;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.rowDescribe {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    padding: 0rem 0.5rem;
+}
+.titleDest {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 124.5%;
+
+    color: #5e6282;
+}
+
+.rowDescribeSimb {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    justify-items: center;
+    align-items: center;
+}
+.pricedest {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 124.5%;
+
+    color: #5e6282;
+}
+
+.loc {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 124.5%;
+    /* identical to box height, or 20px */
+
+    /* TEXT CLR */
+
+    color: #5e6282;
+}
+.AirplaneCorrect {
+    object-fit: contain;
+    height: 20rem;
+    width: 20rem;
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 96%;
+
+    bottom: 0;
+}
+@media (max-width: 1490px) {
+    .rowCardsDest {
+        margin-left: 5%;
+    }
+}
+@media (max-width: 1295px) {
+    .rowCardsDest {
+        margin-left: 0%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .rowCardsDest {
+        margin-left: 0%;
+        justify-content: center;
+    }
+    .boxCategory {
+        margin-top: 25rem;
+        grid-row: 4/6;
+    }
+    .Captilize {
+        font-size: 1.5rem;
+        /* line-height: 2rem; */
+    }
+    .card {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}

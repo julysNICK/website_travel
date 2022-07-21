@@ -1,0 +1,8 @@
+.buttonAnimation {
+    position: absolute;
+    top: 1.8rem;
+    left: 1.4rem;
+    background: transparent;
+    color: transparent;
+    border-color: transparent;
+}

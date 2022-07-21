@@ -1,0 +1,73 @@
+nav {
+    grid-column: 1/13;
+    grid-row: 1/1;
+    margin-top: 1rem;
+    align-items: center;
+    justify-items: center;
+    order: 1;
+    z-index: 2;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    overflow: hidden;
+}
+nav > .rowNavbar {
+    display: flex;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-around;
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+nav > .rowNavbar > div > a,
+nav > .rowNavbar > .rowLinks > .buttonWithIcon > a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 22px;
+    color: #ffffff;
+}
+nav > .rowNavbar > .logoNav {
+    width: 115px;
+    height: 34px;
+    margin-right: 10rem;
+    object-fit: fill;
+}
+
+.buttonWithIcon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.rowLinks {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.threeList {
+    visibility: hidden;
+}
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 20rem;
+    background: linear-gradient(180deg, #005f69 0%, #00ccbc 100%);
+    z-index: -1;
+}
+@media (max-width: 875px) {
+    nav > .rowNavbar > .logoNav,
+    .rowLinks {
+        visibility: hidden;
+    }
+    .threeList {
+        width: 100%;
+        visibility: visible;
+        background: transparent;
+    }
+}

@@ -1,0 +1,17 @@
+.oneRow {
+    margin-top: 5rem;
+    grid-column: 1/12;
+    grid-row: 19/20;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-self: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    object-fit: contain;
+    height: 8rem;
+}
