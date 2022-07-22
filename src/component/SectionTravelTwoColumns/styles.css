@@ -215,6 +215,12 @@
         visibility: hidden;
     }
 }
+
+@media (max-width: 800px) {
+    .columnCard01 {
+        margin-left: 1rem;
+    }
+}
 @media (max-width: 1000px) {
     .twoColumns {
         display: grid;

@@ -6,7 +6,7 @@ import "./styles.css";
 const variants = {
     enter: (direction: number) => {
         return {
-            y: direction > 0 ? 2000 : -2000,
+            y: direction > 0 ? 1000 : -1000,
             opacity: 0
         };
     },
@@ -18,7 +18,7 @@ const variants = {
     exit: (direction: number) => {
         return {
             zIndex: 0,
-            y: direction < 0 ? 2000 : -2000,
+            y: direction < 0 ? 1000 : -1000,
             opacity: 0
         };
     }
@@ -61,11 +61,11 @@ export default function SliderTwoColumn() {
                         exit="exit"
                         transition={{
                             x: {type: "spring", stiffness: 300, damping: 30},
-                            opacity: {duration: 0.8}
+                            opacity: {duration: 0.2}
                         }}
                         drag="x"
                         dragConstraints={{top: 0, bottom: 0}}
-                        dragElastic={9}
+                        dragElastic={1}
                         onDragEnd={(e, {offset, velocity}) => {
                             const swipe = swipePower(offset.y, velocity.y);
 

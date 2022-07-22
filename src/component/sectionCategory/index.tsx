@@ -2,8 +2,8 @@ import React from "react";
 import "./styles.css";
 export default function SectionCategory() {
     return (
-        <section className="boxCategory">
-            <p className="title">Categoria</p>
+        <section className="boxCategory12">
+            <p className="title12">Categoria</p>
             <h1 className="Captilize">Oferecemos os melhores serviços</h1>
             <div className="rowCards">
                 <div className="card">

@@ -65,9 +65,10 @@ justify-self: center; */
     display: flex;
     flex-direction: row;
     justify-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    margin-right: 20%;
+
+    width: 100%;
 }
 .readMore {
     background: #db6851;
@@ -126,6 +127,9 @@ justify-self: center; */
 }
 
 @media (max-width: 800px) {
+    .boxText {
+        grid-column: 2/10;
+    }
     .headBox {
         font-size: 4rem;
     }

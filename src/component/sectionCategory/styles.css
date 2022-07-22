@@ -1,11 +1,11 @@
-.boxCategory {
+.boxCategory12 {
     margin-top: 7rem;
     grid-column: 1/13;
-    grid-row: 9/8;
+    grid-row: 8/9;
     z-index: 2;
 }
 
-.title {
+.title12 {
     font-style: normal;
     font-weight: 600;
     font-size: 1.8rem;
@@ -127,13 +127,12 @@
 }
 
 @media (max-width: 800px) {
+    .boxCategory12 {
+        grid-row: 5/6;
+    }
     .rowCards {
         margin-left: 0%;
         justify-content: center;
-    }
-    .boxCategory {
-        margin-top: 25rem;
-        grid-row: 4/6;
     }
     .Captilize {
         font-size: 1.5rem;
