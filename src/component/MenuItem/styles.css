@@ -1,5 +1,6 @@
 .listItem {
     margin-top: 3rem;
+    z-index: 9999;
 }
 .buttonWithIcon > a,
 .listItem > a {
@@ -9,9 +10,11 @@
     font-size: 1.2rem;
     line-height: 22px;
     color: #ffffff;
+    z-index: 9999;
 }
 .buttonWithIcon {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    z-index: 9999;
 }

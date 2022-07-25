@@ -50,6 +50,7 @@ nav > .rowNavbar > .logoNav {
 }
 .threeList {
     visibility: hidden;
+    z-index: 9;
 }
 .background {
     position: absolute;
@@ -58,7 +59,7 @@ nav > .rowNavbar > .logoNav {
     bottom: 0;
     width: 20rem;
     background: linear-gradient(180deg, #005f69 0%, #00ccbc 100%);
-    z-index: -1;
+    z-index: 9;
 }
 @media (max-width: 875px) {
     nav > .rowNavbar > .logoNav,
@@ -68,6 +69,7 @@ nav > .rowNavbar > .logoNav {
     .threeList {
         width: 100%;
         visibility: visible;
-        background: transparent;
+
+        z-index: 9;
     }
 }

@@ -5,4 +5,5 @@
     background: transparent;
     color: transparent;
     border-color: transparent;
+    z-index: 9;
 }

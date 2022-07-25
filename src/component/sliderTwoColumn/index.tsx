@@ -1,6 +1,6 @@
 import {AnimatePresence, motion} from "framer-motion";
 import {wrap} from "popmotion";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {AiOutlineArrowDown, AiOutlineArrowUp} from "react-icons/ai";
 import "./styles.css";
 const variants = {
@@ -41,6 +41,22 @@ export default function SliderTwoColumn() {
     const paginate = (newDirection: number) => {
         setPage([page + newDirection, newDirection]);
     };
+    const [isMobile, setIsMobile] = useState(false);
+
+    //choose the screen size
+    const handleResize = () => {
+        if (window.innerWidth <= 800) {
+            setIsMobile(true);
+        } else {
+            setIsMobile(false);
+        }
+    };
+
+    // create an event listener
+    useEffect(() => {
+        window.addEventListener("resize", handleResize);
+    });
+    console.log(isMobile);
     return (
         <div className="twoColumnSlider">
             <div className="textColumnOne">
@@ -49,44 +65,55 @@ export default function SliderTwoColumn() {
             </div>
 
             {/*   two Column */}
-            <AnimatePresence initial={false} custom={direction}>
-                <div className="boxTwoColumn">
-                    <motion.div
-                        className="boxBackground"
-                        key={page}
-                        custom={direction}
-                        variants={variants}
-                        initial="enter"
-                        animate="center"
-                        exit="exit"
-                        transition={{
-                            y: {type: "spring", stiffness: 300, damping: 30},
-                            opacity: {duration: 0.2}
-                        }}
-                        drag="y"
-                        dragConstraints={{top: 0, bottom: 0}}
-                        dragElastic={1}
-                        onDragEnd={(e, {offset, velocity}) => {
-                            const swipe = swipePower(offset.y, velocity.y);
+            {!isMobile ? (
+                <AnimatePresence initial={false} custom={direction}>
+                    <div className="boxTwoColumn">
+                        <motion.div
+                            className="boxBackground"
+                            key={page}
+                            custom={direction}
+                            variants={variants}
+                            initial="enter"
+                            animate="center"
+                            exit="exit"
+                            transition={{
+                                y: {type: "spring", stiffness: 300, damping: 30},
+                                opacity: {duration: 0.2}
+                            }}
+                            drag="y"
+                            dragConstraints={{top: 0, bottom: 0}}
+                            dragElastic={1}
+                            onDragEnd={(e, {offset, velocity}) => {
+                                const swipe = swipePower(offset.y, velocity.y);
 
-                            if (swipe < -swipeConfidenceThreshold) {
-                                paginate(1);
-                            } else if (swipe > swipeConfidenceThreshold) {
-                                paginate(-1);
-                            }
-                        }}
-                    >
-                        <div className="boxFront">
-                            <p className="phraseAutor">{arrayPhras[imageIndex]}</p>
-                            <p className="nameAutor">{authorPhrase[imageIndex]}</p>
+                                if (swipe < -swipeConfidenceThreshold) {
+                                    paginate(1);
+                                } else if (swipe > swipeConfidenceThreshold) {
+                                    paginate(-1);
+                                }
+                            }}
+                        >
+                            <div className="boxFront">
+                                <p className="phraseAutor">{arrayPhras[imageIndex]}</p>
+                                <p className="nameAutor">{authorPhrase[imageIndex]}</p>
+                            </div>
+                        </motion.div>
+                        <div className="boxArrows">
+                            <AiOutlineArrowUp onClick={() => paginate(1)} />
+                            <AiOutlineArrowDown onClick={() => paginate(-1)} />
                         </div>
-                    </motion.div>
-                    <div className="boxArrows">
-                        <AiOutlineArrowUp onClick={() => paginate(1)} />
-                        <AiOutlineArrowDown onClick={() => paginate(-1)} />
+                    </div>
+                </AnimatePresence>
+            ) : (
+                <div className="boxTwoColumn">
+                    <div className="boxBackground">
+                        <div className="boxFront">
+                            <p className="phraseAutor">{arrayPhras[0]}</p>
+                            <p className="nameAutor">{authorPhrase[0]}</p>
+                        </div>
                     </div>
                 </div>
-            </AnimatePresence>
+            )}
         </div>
     );
 }

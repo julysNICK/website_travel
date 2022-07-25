@@ -1,4 +1,5 @@
 .listItems {
     margin-top: 5rem;
     list-style: none;
+    z-index: 9;
 }
