@@ -15,7 +15,7 @@ function App() {
             <SectionCategory />
             <SectionDestination />
             <SectionTravelTwoColumns />
-            <SliderTwoColumn />
+            {/* <SliderTwoColumn /> */}
             <ListLogos />
             <SendMe />
         </div>
